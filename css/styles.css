@@ -64,7 +64,8 @@ header .main-logo p:last-child > img:hover {
 }
 
 .first-block {
-    padding: 0 110px;
+    width: 1300px;
+    margin: 0 auto;
 }
 
 .first-block .advice {
@@ -105,6 +106,7 @@ header .main-logo p:last-child > img:hover {
 
 .first-block .text-advice p {
     font-size: 24px;
+    line-height: 1.2;
 }
 
 .first-block .text-advice p span {
@@ -112,4 +114,115 @@ header .main-logo p:last-child > img:hover {
     font-size: 48px;
     color: #4783C4;
     font-weight: 700;
+}
+
+.second-block {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.second-block .cards {
+    display: flex;
+    justify-content: center;
+}
+
+.second-block .card {
+    width: 250px;
+    text-align: center;
+    margin-right: 80px;
+}
+
+.second-block .card:last-child {
+    margin-right: 0;
+}
+
+.second-block .card .card-text {
+    margin-top: 5px;
+    line-height: 1.2;
+}
+
+.second-block h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #4783C4;
+    margin-bottom: 40px;
+}
+
+.second-block .card-text {
+    color: #4783C4;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.third-block {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.third-block form {
+    display: flex;
+    flex-direction: column;
+}
+
+.third-block label {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    color: #4783C4;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.third-block textarea {
+    border: 3px solid #4783C4;
+    outline: none;
+    min-height: 250px;
+}
+
+.third-block textarea:focus {
+    border: 3px solid #4777b0;
+}
+
+.third-block .btn-group {
+    display: flex;
+}
+
+.third-block .btn {
+    width: 100%;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.third-block .btn:last-child {
+    margin-right: 0;
+}
+
+.third-block .btn p {
+    margin-top: 3px;
+    font-size: 12px;
+    color: #4783C4;
+}
+
+.third-block button {
+    width: 100%;
+    background-color: transparent;
+    height: 35px;
+    border: 3px solid #4783C4;
+    outline: none;
+    font-size: 18px;
+    color: #BFE4EA;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.third-block button:hover {
+    background-color: #dcedff;
+}
+
+.third-block button.active {
+    background-color: #dcedff;
+    color: #4777b0;
 }
