@@ -41,11 +41,9 @@ header .main-logo p {
 header .main-logo p:first-child {
     color: #fff;
     -webkit-text-stroke: 2px #77CFE3;
-    /* margin-bottom: 15px; */
 }
 
 header .main-logo p:last-child {
-    /* margin-bottom: -20px; */
     color: #77CFE3;
     display: flex;
     justify-content: space-between;
@@ -430,7 +428,7 @@ footer a {
 
 @media screen and (max-width: 425px) {
     header img[src="img/logo.png"] {
-        display: none;
+        height: 120px;
     }
 
     a[href="#message"] {
@@ -438,8 +436,7 @@ footer a {
     }
 
     header .main-logo p {
-        font-size: 38px;
-        text-align: center;
+        font-size: 30px;
     }
 
     header .main-logo p:last-child {
@@ -464,7 +461,7 @@ footer a {
     }
 
     header .main-text {
-        margin-left: 5px;
+        margin-left: 0px;
     }
 
     .second-block .cards {
@@ -523,5 +520,13 @@ footer a {
 
     .fourth-block .pay-icons img {
         height: 40px;
+    }
+
+    header img[src="img/logo.png"] {
+        height: 100px;
+    }
+
+    header .main-logo p {
+        font-size: 26px;
     }
 }
