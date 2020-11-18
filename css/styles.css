@@ -430,7 +430,7 @@ footer a {
 
 @media screen and (max-width: 425px) {
     header img[src="img/logo.png"] {
-        height: 120px;
+        display: none;
     }
 
     a[href="#message"] {
@@ -439,6 +439,11 @@ footer a {
 
     header .main-logo p {
         font-size: 38px;
+        text-align: center;
+    }
+
+    header .main-logo p:last-child {
+        display: block;
     }
 
     .first-block .dots {
@@ -496,7 +501,7 @@ footer a {
     }
 
     .fourth-block .pay-icons img {
-        margin-right: 7px;
+        margin-right: 0;
     }
     
     footer .footer-cont {
@@ -512,20 +517,11 @@ footer a {
 }
 
 @media screen and (max-width: 375px) {
-    header img[src="img/logo.png"] {
-        height: 105px;
-    }
-
-    header .main-logo p {
-        font-size: 31px;
-    }
-
     .fourth-block p, .third-block label, .second-block p {
         font-size: 27px;
     }    
 
     .fourth-block .pay-icons img {
-        height: 44px;
-        margin-right: 5px;
+        height: 40px;
     }
 }
