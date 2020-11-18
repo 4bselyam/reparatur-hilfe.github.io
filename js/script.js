@@ -40,3 +40,20 @@ function removeClasses() {
     secondButton.removeClass('active')
     thirdButton.removeClass('active')
 }
+
+// ======================================
+
+function scrollToElement(theElement) {
+    var selectedPosX = 0;
+    var selectedPosY = 0;
+
+    while (theElement != null) {
+        selectedPosX += theElement.offsetLeft;
+        selectedPosY += theElement.offsetTop;
+        theElement = theElement.offsetParent;
+    }
+
+    window.scrollTo(selectedPosX,selectedPosY);
+}
+
+$('#scroll-to-mail').click(scrollToElement($('#1')))
