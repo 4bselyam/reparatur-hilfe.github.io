@@ -427,6 +427,9 @@ footer a {
 }
 
 @media screen and (max-width: 425px) {
+    header .wrapper {
+        padding: 15px;
+    }
     header img[src="img/logo.png"] {
         height: 120px;
     }
@@ -436,7 +439,7 @@ footer a {
     }
 
     header .main-logo p {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     header .main-logo p:last-child {
@@ -461,7 +464,7 @@ footer a {
     }
 
     header .main-text {
-        margin-left: 0px;
+        margin-left: 5px;
     }
 
     .second-block .cards {
@@ -514,6 +517,9 @@ footer a {
 }
 
 @media screen and (max-width: 375px) {
+    header .wrapper {
+        padding: 10px;
+    }
     .fourth-block p, .third-block label, .second-block p {
         font-size: 27px;
     }    
@@ -527,6 +533,6 @@ footer a {
     }
 
     header .main-logo p {
-        font-size: 26px;
+        font-size: 32px;
     }
 }
