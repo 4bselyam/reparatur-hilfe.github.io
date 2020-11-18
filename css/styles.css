@@ -11,11 +11,15 @@ body {
 header {
     background-image: url('../img/header-bg.png');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 50%;
 }
 
 header .wrapper {
     padding: 60px;
+}
+
+header img[src="img/logo.png"] { 
+    height: 250px;
 }
 
 header .main-logo {
@@ -37,11 +41,11 @@ header .main-logo p {
 header .main-logo p:first-child {
     color: #fff;
     -webkit-text-stroke: 2px #77CFE3;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 header .main-logo p:last-child {
-    margin-bottom: -20px;
+    /* margin-bottom: -20px; */
     color: #77CFE3;
     display: flex;
     justify-content: space-between;
@@ -121,15 +125,19 @@ header .main-logo p:last-child img:hover {
     margin: 50px auto;
 }
 
+.second-block .card-photo img {
+    width: 300px;
+}
+
 .second-block .cards {
     display: flex;
     justify-content: center;
 }
 
 .second-block .card {
-    width: 250px;
+    width: 300px;
     text-align: center;
-    margin-right: 80px;
+    margin-right: 200px;
 }
 
 .second-block .card:last-child {
@@ -248,7 +256,7 @@ header .main-logo p:last-child img:hover {
 }
 
 .fourth-block {
-    width: 1300px;
+    width: 85%;
     margin: 0 auto;
     display: flex;
     align-items: flex-end;
@@ -314,7 +322,7 @@ header .main-logo p:last-child img:hover {
 footer {
     margin-top: 50px;
     background-image: url(../img/footer-bg.png);
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     padding: 150px 100px;
 }
@@ -340,4 +348,136 @@ footer .footer-cont {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+@media screen and (max-width: 1024px) {
+    header .wrapper {
+        padding: 30px;
+    }
+
+    .first-block .text-advice p span {
+        font-size: 36px;
+    }
+
+    .second-block .card-photo img {
+        width: 200px;
+    }
+
+    .second-block .card {
+        width: 200px;
+        margin-right: 80px;
+    }
+
+    .second-block .card .card-text {
+        font-size: 14px;
+    }
+
+    .fourth-block p,
+    .third-block label,
+    .second-block p {
+        font-size: 29px;
+    }
+    
+    .fourth-block .pay-text,
+    .fourth-block .buy-btn p,
+    .first-block .text-advice p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .main-logo p {
+        font-size: 60px;
+    }
+
+    header img[src="img/logo.png"] {
+        height: 200px;
+    }
+
+    .first-block .dots {
+        margin-right: 50px;
+    }
+
+    .second-block .card {
+        margin-right: 40px;
+    }
+
+    .third-block button {
+        font-size: 16px;
+    }
+
+    .third-block .btn p {
+        font-size: 9.5px;
+    }
+
+    .fourth-block .buy-btn p {
+        text-align: center;
+    }
+    
+    footer ul li {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    header img[src="img/logo.png"] {
+        height: 120px;
+    }
+
+    a[href="#message"] {
+        display: none;
+    }
+
+    header .main-logo p {
+        font-size: 38px;
+    }
+
+    .first-block .dots {
+        margin-right: 0;
+    }
+
+    .first-block .advice {
+        display: block;
+    }
+    
+    .first-block .text-advice p span {
+        font-size: 28px;
+    }
+
+    .fourth-block .pay-text, .fourth-block .buy-btn p, .first-block .text-advice p {
+        margin-top: 5px;
+        font-size: 18px;
+    }
+
+    header .main-text {
+        margin-left: 5px;
+    }
+
+    .second-block .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .second-block .card {
+        width: 300px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .second-block .card-photo img {
+        width: 300px;
+    }
+
+    .second-block .card .card-text {
+        font-size: 18px;
+    }
+
+    .third-block .btn-group {
+        flex-direction: column;
+    }
 }

@@ -43,17 +43,16 @@ function removeClasses() {
 
 // ======================================
 
-function scrollToElement(theElement) {
-    var selectedPosX = 0;
-    var selectedPosY = 0;
+// $(window).resize(function (e) {
+//     if(e.target.innerWidth <= 1100) {
+//         $('.card-photo img').attr('width', '250')
+//     } else if (e.target.innerWidth <= 850) {
+//         $('.card-photo img').attr('width', '200')
+//     } else {
+//         $('.card-photo img').attr('width', '300') 
+//     }
 
-    while (theElement != null) {
-        selectedPosX += theElement.offsetLeft;
-        selectedPosY += theElement.offsetTop;
-        theElement = theElement.offsetParent;
-    }
-
-    window.scrollTo(selectedPosX,selectedPosY);
-}
-
-$('#scroll-to-mail').click(scrollToElement($('#1')))
+//     if (e.target.innerWidth <= 768) {
+//         $('.main-logo img[src="img/logo.png"]').attr('height', '200')
+//     } 
+// })
