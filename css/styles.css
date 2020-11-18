@@ -312,6 +312,7 @@ header .main-logo p:last-child img:hover {
 }
 
 footer {
+    margin-top: 50px;
     background-image: url(../img/footer-bg.png);
     background-size: 100%;
     background-repeat: no-repeat;
