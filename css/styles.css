@@ -319,6 +319,10 @@ header .main-logo p:last-child img:hover {
     margin-top: 15px;
 }
 
+.fourth-block .pay-icons img {
+    height: 50px;
+}
+
 footer {
     margin-top: 50px;
     background-image: url(../img/footer-bg.png);
@@ -479,5 +483,49 @@ footer a {
 
     .third-block .btn-group {
         flex-direction: column;
+    }
+
+    .fourth-block {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fourth-block .buy-btn {
+        margin-top: 20px;
+    }
+
+    .fourth-block .pay-icons img {
+        margin-right: 7px;
+    }
+    
+    footer .footer-cont {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .second-block {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    header img[src="img/logo.png"] {
+        height: 105px;
+    }
+
+    header .main-logo p {
+        font-size: 31px;
+    }
+
+    .fourth-block p, .third-block label, .second-block p {
+        font-size: 27px;
+    }    
+
+    .fourth-block .pay-icons img {
+        height: 44px;
+        margin-right: 5px;
     }
 }
