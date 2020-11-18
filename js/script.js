@@ -1,58 +1,54 @@
-const firstButton = $('#1')
-const secondButton = $('#2')
-const thirdButton = $('#3')
+const numberField = $('input[name="number"]')
 
-firstButton.click(function (e) {
+numberField.on('input', function(e) {
+    $(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]/, ''))
+})
+
+$('.send').click(function(e) {
     e.preventDefault()
 
-    firstButton.toggleClass('active')
+    var email = $.trim($('input[type="email"]').val())
+    var telephone = $.trim($('input[type="text"]').val())
+    var time = $.trim($('select').val())
+    var message = $.trim($('textarea').val())
 
-    if(firstButton.hasClass('active')) {
-        secondButton.removeClass('active')
-        thirdButton.removeClass('active')
+    if (email.length == 0) {
+        alert('Enter the email')
+        $('input[type="email"]').css('border-color','red')
+        setInterval(function() {
+            $('input[type="email"]').css('border-color','#4783C4')
+        }, 2000)
+    } else if (telephone.length <= 3) {
+        alert('Enter the telephone number')
+        $('input[type="text"]').css('border-color','red')
+        setInterval(function() {
+            $('input[type="text"]').css('border-color','#4783C4')
+        }, 2000)
+    } else if (message.length < 5) {
+        alert('Enter the message')
+        $('textarea').css('border-color','red')
+        setInterval(function() {
+            $('textarea').css('border-color','#4783C4')
+        }, 2000)
+    } else if (!email.includes('@')) {
+        alert('Enter the valid email')
+        $('input[type="email"]').css('border-color','red')
+        setInterval(function() {
+            $('input[type="email"]').css('border-color','#4783C4')
+        }, 2000)
+    } else {
+        sendAjax()
     }
 })
 
-secondButton.click(function (e) {
-    e.preventDefault()
-
-    secondButton.toggleClass('active')
-
-    if(secondButton.hasClass('active')) {
-        firstButton.removeClass('active')
-        thirdButton.removeClass('active')
-    }
-})
-
-thirdButton.click(function (e) {
-    e.preventDefault()
-
-    thirdButton.toggleClass('active')
-
-    if(thirdButton.hasClass('active')) {
-        firstButton.removeClass('active')
-        secondButton.removeClass('active')
-    }
-})
-
-function removeClasses() {
-    firstButton.removeClass('active')
-    secondButton.removeClass('active')
-    thirdButton.removeClass('active')
+function sendAjax(number, email, message, time) {
+    $.ajax({
+        url: '../venv/index.php',
+        type: 'POST',
+        cache: false,
+        data: {number, email, message, time},
+        success: function() {
+            alert('Your message has been delivered!')
+        }
+    })
 }
-
-// ======================================
-
-// $(window).resize(function (e) {
-//     if(e.target.innerWidth <= 1100) {
-//         $('.card-photo img').attr('width', '250')
-//     } else if (e.target.innerWidth <= 850) {
-//         $('.card-photo img').attr('width', '200')
-//     } else {
-//         $('.card-photo img').attr('width', '300') 
-//     }
-
-//     if (e.target.innerWidth <= 768) {
-//         $('.main-logo img[src="img/logo.png"]').attr('height', '200')
-//     } 
-// })
